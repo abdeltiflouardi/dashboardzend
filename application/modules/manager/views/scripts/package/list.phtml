@@ -1,0 +1,35 @@
+<div id="content">
+    <?php echo $this->partial('elements/_tabs.phtml', array('SubMenuPackage' => true, 'type' => $this->getRequest()->getParam('type'))); ?>
+    <a href="<?php echo $this->url(array('type' => $this->getRequest()->getParam('type'), 'controller' => 'package', 'action' => 'new'), 'managerActionRoute'); ?>">Nouveau package</a>
+
+    <table class="list">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Prime</th>
+            <th>Cible</th>
+            <th>Spécification</th>
+            <th>Condition</th>
+            <th>Avantage</th>
+            <th>Garanties</th>
+            <th>Active</th>
+        </tr>
+        <?php foreach ($this->paginator as $index => $package): ?>
+        <tr class="<?php echo ($index % 2 == 0) ? 'even' : 'odd' ?>">
+            <td><a href="<?php echo $this->url(array('type' => $this->getRequest()->getParam('type'), 'controller' => 'package', 'id' => $package['PackageID']), 'managerActionEditRoute'); ?>"><?php echo $package['PackageID']; ?></a></td>
+            <td><?php echo $package['PackageName']; ?></td>
+            <td class="numeric"><?php echo $package['PackagePrime']; ?></td>
+            <td><?php echo $package['PackageCible']; ?></td>
+            <td><?php echo $package['PackageSpecification']; ?></td>
+            <td><?php echo $package['PackageConditionSouscription']; ?></td>
+            <td><?php echo $package['PackageAvantage']; ?></td>
+            <td><?php foreach($this->packagesGaranties[$package['PackageID']] as $garantieName) echo $garantieName . ', '; ?></td>
+            <td><?php echo $package['PackageEnabled'] == 1 ? 'Oui' : 'No'; ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+    
+    <?php echo $this->paginationControl($this->paginator,
+                                        'Sliding',
+                                        array('paginator.phtml', 'common')); ?>    
+</div>

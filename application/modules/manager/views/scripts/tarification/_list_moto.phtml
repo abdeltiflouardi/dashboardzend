@@ -1,0 +1,23 @@
+
+    <table class="list">
+        <tr>
+            <th>ID</th>
+            <th>Garantie</th>
+            <th>Cylindre</th>
+            <th>Nombre de roue</th>
+            <th>Prime</th>
+        </tr>
+        <?php foreach ($this->paginator as $index => $tarification): ?>
+        <tr class="<?php echo ($index % 2 == 0) ? 'even' : 'odd' ?>">
+            <td><a href="<?php echo $this->url(array('type' => $this->getRequest()->getParam('type'), 'controller' => 'tarification', 'id' => $tarification['TarificationID']), 'managerActionEditRoute'); ?>"><?php echo $tarification['TarificationID']; ?></a></td>
+            <td><?php echo $tarification['GarantieID']; ?></td>
+            <td><?php echo $tarification['CylindreID']; ?></td>
+            <td><?php echo $tarification['NbRoue']; ?></td>
+            <td><?php echo $tarification['Prime']; ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+    
+    <?php echo $this->paginationControl($this->paginator,
+                                        'Sliding',
+                                        array('paginator.phtml', 'common')); ?> 

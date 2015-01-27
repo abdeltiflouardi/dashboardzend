@@ -1,0 +1,28 @@
+<div id="sidebar">
+    <ul>
+        <?php if ($this->selected == 'dashboard'): ?>
+            <li<?php if ($this->item == 'auto') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'auto', 'action' => 'index'), 'adminRoute') ?>" class="icon car">Auto</a></li>
+            <li<?php if ($this->item == 'moto') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'moto', 'action' => 'index'), 'adminRoute') ?>" class="icon moto">Moto</a></li>
+            <li<?php if ($this->item == 'settings') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'settings', 'action' => 'index'), 'adminRoute') ?>" class="icon settings">Settings</a></li>
+        <?php endif; ?>
+
+        <?php if ($this->selected == 'settings'): ?>
+            <li<?php if ($this->item == 'vehicule') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'vehicule', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.vehicle'); ?></a></li>
+            <li<?php if ($this->item == 'marque') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'marque', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.brand'); ?></a></li>
+            <li<?php if ($this->item == 'model') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'model', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.model'); ?></a></li>
+            <li<?php if ($this->item == 'cylindre') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'cylindre', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.cylindre'); ?></a></li>
+            <li<?php if ($this->item == 'puissance') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'puissance', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.power'); ?></a></li>
+            <li<?php if ($this->item == 'usage') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'usage', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.usage'); ?></a></li>
+            <li<?php if ($this->item == 'carburant') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'carburant', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.carburant'); ?></a></li>            
+            <li<?php if ($this->item == 'assurance') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'assurance', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.insurance'); ?></a></li>
+            <li<?php if ($this->item == 'assureur') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'assureur', 'action' => 'index'), 'adminRoute') ?>" class="icon property"><?php echo $this->translate('title.insurer'); ?></a></li>
+        <?php endif; ?>
+
+        <?php if ($this->selected == 'assurances'): ?>
+            <li<?php if ($this->item == 'package') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'package', 'action' => 'index', 'type' => $this->getRequest()->getParam('type')), 'adminTypeRoute') ?>" class="icon property"><?php echo $this->translate('title.package'); ?></a></li>
+            <li<?php if ($this->item == 'tarification') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'tarification', 'action' => 'index', 'type' => $this->getRequest()->getParam('type')), 'adminTypeRoute') ?>" class="icon property"><?php echo $this->translate('title.tarification'); ?></a></li>
+            <li<?php if ($this->item == 'garantie') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'garantie', 'action' => 'index', 'type' => $this->getRequest()->getParam('type')), 'adminTypeRoute') ?>" class="icon property"><?php echo $this->translate('title.garantie'); ?></a></li>
+            <li<?php if ($this->item == 'attestation') echo ' class="active"' ?>><a href="<?php echo $this->url(array('controller' => 'attestation', 'action' => 'index', 'type' => $this->getRequest()->getParam('type')), 'adminTypeRoute') ?>" class="icon property"><?php echo $this->translate('title.attestation'); ?></a></li>
+        <?php endif; ?>
+    </ul> 
+</div>

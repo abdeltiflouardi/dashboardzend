@@ -1,0 +1,23 @@
+<div id="content">
+    <?php echo $this->partial('elements/_tabs.phtml', array('SubMenuGaranties' => true, 'type' => $this->getRequest()->getParam('type'))); ?>
+    <a href="<?php echo $this->url(array('type' => $this->getRequest()->getParam('type'), 'controller' => 'garantie', 'action' => 'new'), 'managerActionRoute'); ?>">Nouveau garantie</a>
+
+    <table class="list">
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Actions</th>
+        </tr>
+        <?php foreach ($this->paginator as $index => $garantie): ?>
+        <tr class="<?php echo ($index % 2 == 0) ? 'even' : 'odd' ?>">
+            <td><?php echo $garantie['GarantieID'] ?></td>
+            <td><?php echo $this->garanties[$garantie['GarantieID']] ?></td>
+            <td><a href="<?php echo $this->qurl(array('type' => $this->getRequest()->getParam('type'), 'controller' => 'garantie', 'action' => 'delete', 'params' => array('GarantieID' => $garantie['GarantieID'])), 'managerActionRoute'); ?>">Supprimer</a></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+
+    <?php echo $this->paginationControl($this->paginator,
+                                        'Sliding',
+                                        array('paginator.phtml', 'common')); ?>
+</div>

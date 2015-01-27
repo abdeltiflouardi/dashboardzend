@@ -1,0 +1,117 @@
+/* Global rules
+-------------------------------------------------------------- */
+html { 
+  font-size: 100%; /* Évite un bug d'IE 6-7. (1) */ 
+}
+
+body { 
+  margin: 0; 
+  padding: 0; /* Remettre à zéro si nécessaire. */ 
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px; /* À adapter pour la police choisie. (3) */ 
+  color: #333; 
+  background: white; 
+}
+
+/* Title rules
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 { 
+  margin: 1em 0 .5em 0; /* Rapproche le titre du texte. (5) */ 
+  line-height: 1.2; 
+  font-weight: bold; /* Valeur par défaut. (6) */ 
+  font-style: normal; 
+}
+
+h1 { font-size: 1.75em; } 
+h2 { font-size: 1.5em; } 
+h3 { font-size: 1.25em; } 
+h4 { font-size: 1em; } 
+ 
+/* Lists rules
+-------------------------------------------------------------- */
+ul, ol { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.inline li { display: inline; }
+ 
+/* Paragraphs rules
+-------------------------------------------------------------- */
+p { 
+	margin: .75em 0; /* Marges plus faibles que par défaut. (7) */
+	line-height: 1.4;
+}
+
+address { 
+  margin: .75em 0; 
+  font-style: normal; 
+}
+
+p.center { text-align: center; }
+p.right { text-align: right; }
+p.left { text-align: left; }
+p.justify { text-align: justify; }
+ 
+/* Links rules
+-------------------------------------------------------------- */
+a { 
+	color: #40474d;
+	text-decoration: none;
+} 
+a:link { 
+	color: #40474d;
+} 
+a:visited { 
+	color: #40474d;
+} 
+a:hover, a:focus, a:active { 
+	color: #40474d;
+} 
+ 
+/* Pas de bordure autour des images dans les liens */ 
+a img { 
+  border: none; 
+} 
+ 
+/* Others HTML elements rules
+-------------------------------------------------------------- */
+em { 
+  font-style: italic; 
+} 
+strong { 
+  font-weight: bold; 
+}
+
+/* Tables rules
+-------------------------------------------------------------- */
+table { 
+  margin: 0; 
+  border: 1px solid gray; /* Pas de bordure = "none". */ 
+  border-collapse: collapse; /* Valeur par défaut: "separate". */ 
+  border-spacing: 0; 
+} 
+table td, table th { 
+  padding: 4px; /* Pas de retrait autour du texte = "0". */ 
+  border: 1px solid #ccc; /* Pas de bordure = "none". */ 
+  vertical-align: top; /* Valeur par défaut: "middle" */ 
+} 
+ 
+/* Conteneurs sémantiques de HTML 5 */ 
+article, aside, dialog, figure, footer, header, 
+hgroup, menu, nav, section { 
+  display: block; 
+}
+
+ 
+/* Forms rules
+-------------------------------------------------------------- */
+form, fieldset { 
+  margin: 0; 
+  padding: 0; 
+  border: none; 
+} 
+input, button, select { 
+  vertical-align: middle; /* Solution pb. d'alignement. (9) */ 
+}

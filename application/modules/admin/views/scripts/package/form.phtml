@@ -1,0 +1,17 @@
+<?php echo $this->partial('admin/sidebar.phtml', array('selected' => 'assurances', 'item' => 'package')); ?>
+
+<div id="content">
+    <div class="left">
+        <?php echo $this->partial('admin/items_list.phtml', array('list' => $this->list, 'controller' => 'package', 'action' => 'edit','id' => $this->id, 'fields' => array('PackageID', 'PackageName'))) ?>
+    </div>
+    
+    <div class="right">
+        <h3 class="pagetitle icon property"><?php echo $this->translate('title.package'); ?></h3>
+        <div class="form">
+            <?php
+                $this->packageForm->setAction($this->url());
+                echo $this->packageForm;
+            ?>
+        </div>
+    </div>
+</div>

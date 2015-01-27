@@ -1,0 +1,17 @@
+<?php echo $this->partial('admin/sidebar.phtml', array('selected' => 'settings', 'item' => 'cylindre')); ?>
+
+<div id="content">
+    <div class="left">
+        <?php echo $this->partial('admin/items_list.phtml', array('list' => $this->list, 'controller' => 'cylindre', 'action' => 'edit','id' => $this->id, 'fields' => array('CylindreID', 'CylindreName'))) ?>
+    </div>
+    
+    <div class="right">
+        <h3 class="pagetitle icon property"><?php echo $this->translate('title.cylindre'); ?></h3>
+        <div class="form">
+            <?php
+                $this->cylindreForm->setAction($this->url());
+                echo $this->cylindreForm;
+            ?>
+        </div>
+    </div>
+</div>

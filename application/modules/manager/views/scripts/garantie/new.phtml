@@ -1,0 +1,5 @@
+<div id="content">
+    <?php echo $this->partial('elements/_tabs.phtml', array('SubMenuGaranties' => true, 'type' => $this->getRequest()->getParam('type'))); ?>
+    <?php $this->garantieForm->setAction($this->url()); ?>
+    <?php echo $this->garantieForm ?>
+</div>

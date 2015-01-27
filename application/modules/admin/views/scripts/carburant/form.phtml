@@ -1,0 +1,17 @@
+<?php echo $this->partial('admin/sidebar.phtml', array('selected' => 'settings', 'item' => 'carburant')); ?>
+
+<div id="content">
+    <div class="left">
+        <?php echo $this->partial('admin/items_list.phtml', array('list' => $this->list, 'controller' => 'carburant', 'action' => 'edit','id' => $this->id, 'fields' => array('CarburantID', 'CarburantName'))) ?>
+    </div>
+    
+    <div class="right">
+        <h3 class="pagetitle icon property"><?php echo $this->translate('title.carburant'); ?></h3>
+        <div class="form">
+            <?php
+                $this->carburantForm->setAction($this->url());
+                echo $this->carburantForm;
+            ?>
+        </div>
+    </div>
+</div>

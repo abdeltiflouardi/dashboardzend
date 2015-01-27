@@ -1,0 +1,9 @@
+<div id="content">
+    <?php echo $this->partial('elements/_tabs.phtml', array('SubMenuPackage' => true, 'type' => $this->getRequest()->getParam('type'))); ?>
+    <div class="form">
+        <?php
+            $this->packageForm->setAction($this->url());
+            echo $this->packageForm;
+        ?>
+    </div>
+</div>

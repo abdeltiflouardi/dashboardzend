@@ -1,0 +1,11 @@
+<?php echo $this->partial('admin/sidebar.phtml', array('selected' => 'assurances', 'item' => 'tarification')); ?>
+
+<div id="content">
+    <div class="left">
+        <?php echo $this->partial('admin/items_list.phtml', array('list' => $this->list, 'controller' => 'tarification', 'action' => 'edit','id' => $this->id, 'fields' => array('TarificationID', 'Prime'))) ?>
+    </div>
+    
+    <div class="right">
+        
+    </div>
+</div>

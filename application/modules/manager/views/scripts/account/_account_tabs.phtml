@@ -1,0 +1,6 @@
+    <div class="tabs">
+    <ul>
+        <li><a href="<?php echo $this->url(array('action' => 'profile'), 'managerProfileRoute') ?>"<?php if ($this->SubMenuProfile): ?> class="selected"<?php endif; ?>>Profile</a></li>
+        <li><a href="<?php echo $this->url(array('action' => 'password'), 'managerProfileRoute') ?>"<?php if ($this->SubMenuPassword): ?> class="selected"<?php endif; ?>>Mot de passe</a></li>
+    </ul>
+    </div>

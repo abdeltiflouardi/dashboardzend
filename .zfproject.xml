@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<projectProfile type="default" version="1.11.11">
+  <projectDirectory>
+    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <applicationDirectory classNamePrefix="Application_">
+      <apisDirectory enabled="false"/>
+      <configsDirectory>
+        <applicationConfigFile type="ini"/>
+      </configsDirectory>
+      <controllersDirectory>
+        <controllerFile controllerName="Index">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Auth">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="login"/>
+          <actionMethod actionName="logout"/>
+        </controllerFile>
+      </controllersDirectory>
+      <formsDirectory>
+        <formFile formName="Assurances"/>
+        <formFile formName="Login"/>
+      </formsDirectory>
+      <layoutsDirectory>
+        <layoutScriptsDirectory>
+          <layoutScriptFile layoutName="layout"/>
+        </layoutScriptsDirectory>
+      </layoutsDirectory>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Assurances"/>
+          <dbTableFile dbTableName="Assureurs"/>
+          <dbTableFile dbTableName="Attestations"/>
+          <dbTableFile dbTableName="Carburants"/>
+          <dbTableFile dbTableName="Cylindres"/>
+          <dbTableFile dbTableName="Garanties"/>
+          <dbTableFile dbTableName="Habitations"/>
+          <dbTableFile dbTableName="Marques"/>
+          <dbTableFile dbTableName="Modeles"/>
+          <dbTableFile dbTableName="Packages"/>
+          <dbTableFile dbTableName="PackagesGranties"/>
+          <dbTableFile dbTableName="Polices"/>
+          <dbTableFile dbTableName="Puissances"/>
+          <dbTableFile dbTableName="Reduction"/>
+          <dbTableFile dbTableName="Souscripteurs"/>
+          <dbTableFile dbTableName="TarificationsAuto"/>
+          <dbTableFile dbTableName="TarificationsMoto"/>
+          <dbTableFile dbTableName="Usages"/>
+          <dbTableFile dbTableName="Vehicules"/>
+        </dbTableDirectory>
+        <modelFile modelName="AssurancesMapper"/>
+        <modelFile modelName="AssureursMapper"/>
+        <modelFile modelName="AttestationsMapper"/>
+        <modelFile modelName="CarburantsMapper"/>
+        <modelFile modelName="CylindresMapper"/>
+        <modelFile modelName="GarantiesMapper"/>
+        <modelFile modelName="HabitationsMapper"/>
+        <modelFile modelName="MarquesMapper"/>
+        <modelFile modelName="ModelesMapper"/>
+        <modelFile modelName="PackagesMapper"/>
+        <modelFile modelName="PackagesGrantiesMapper"/>
+        <modelFile modelName="PolicesMapper"/>
+        <modelFile modelName="PuissancesMapper"/>
+        <modelFile modelName="ReductionMapper"/>
+        <modelFile modelName="SouscripteursMapper"/>
+        <modelFile modelName="TarificationsAutoMapper"/>
+        <modelFile modelName="TarificationsMotoMapper"/>
+        <modelFile modelName="UsagesMapper"/>
+        <modelFile modelName="VehiculesMapper"/>
+        <modelFile modelName="Vehicules"/>
+        <modelFile modelName="TarificationsMoto"/>
+        <modelFile modelName="TarificationsAuto"/>
+        <modelFile modelName="Souscripteurs"/>
+        <modelFile modelName="Reduction"/>
+        <modelFile modelName="Puissances"/>
+        <modelFile modelName="Polices"/>
+        <modelFile modelName="PackagesGranties"/>
+        <modelFile modelName="Packages"/>
+        <modelFile modelName="Modeles"/>
+        <modelFile modelName="Marques"/>
+        <modelFile modelName="Habitations"/>
+        <modelFile modelName="Garanties"/>
+        <modelFile modelName="Cylindres"/>
+        <modelFile modelName="Carburants"/>
+        <modelFile modelName="Attestations"/>
+        <modelFile modelName="Assureurs"/>
+        <modelFile modelName="Assurances"/>
+      </modelsDirectory>
+      <modulesDirectory>
+        <moduleDirectory moduleName="admin">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false"/>
+          <controllersDirectory/>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false">
+            <layoutScriptsDirectory enabled="false"/>
+          </layoutsDirectory>
+          <modelsDirectory>
+            <dbTableDirectory enabled="false"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory/>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="admin">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Auth">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Dashboard">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Base">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Assurances">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Settings">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Package">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Tarification">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Garantie">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Assurance">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Assurant">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Attestation">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Vehicule">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Marque">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Model">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Cylindre">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Puissance">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Usage">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Auto">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Moto">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory>
+            <formFile formName="Marque"/>
+          </formsDirectory>
+          <layoutsDirectory enabled="false">
+            <layoutScriptsDirectory enabled="false"/>
+          </layoutsDirectory>
+          <modelsDirectory>
+            <dbTableDirectory enabled="false"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Auth">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Dashboard">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Base">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Assurances">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Settings">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Package">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Tarification">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Garantie">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Assurance">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Assurant">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Attestation">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Vehicule">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Marque">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Model">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Cylindre">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Puissance">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Usage">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Auto">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Moto">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="manager">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Dashboard">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Account">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="profile"/>
+            </controllerFile>
+            <controllerFile controllerName="Auto">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Moto">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+            <controllerFile controllerName="Package">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="new"/>
+            </controllerFile>
+            <controllerFile controllerName="Tarification">
+              <actionMethod actionName="index"/>
+              <actionMethod actionName="list"/>
+            </controllerFile>
+            <controllerFile controllerName="Souscripteur">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false">
+            <layoutScriptsDirectory enabled="false"/>
+          </layoutsDirectory>
+          <modelsDirectory>
+            <dbTableDirectory enabled="false"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Dashboard">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Account">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Account">
+                <viewScriptFile forActionName="profile"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Auto">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Moto">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Package">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Package">
+                <viewScriptFile forActionName="new"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Tarification">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Tarification">
+                <viewScriptFile forActionName="list"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Souscripteur">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+        <moduleDirectory moduleName="common">
+          <apisDirectory enabled="false"/>
+          <configsDirectory enabled="false"/>
+          <controllersDirectory>
+            <controllerFile controllerName="Base">
+              <actionMethod actionName="index"/>
+            </controllerFile>
+          </controllersDirectory>
+          <formsDirectory enabled="false"/>
+          <layoutsDirectory enabled="false">
+            <layoutScriptsDirectory enabled="false"/>
+          </layoutsDirectory>
+          <modelsDirectory>
+            <dbTableDirectory enabled="false"/>
+          </modelsDirectory>
+          <viewsDirectory>
+            <viewScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Base">
+                <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+            </viewScriptsDirectory>
+            <viewHelpersDirectory/>
+            <viewFiltersDirectory/>
+          </viewsDirectory>
+        </moduleDirectory>
+      </modulesDirectory>
+      <viewsDirectory>
+        <viewScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Error">
+            <viewScriptFile forActionName="error"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="login"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Auth">
+            <viewScriptFile forActionName="logout"/>
+          </viewControllerScriptsDirectory>
+        </viewScriptsDirectory>
+        <viewHelpersDirectory/>
+        <viewFiltersDirectory enabled="false"/>
+      </viewsDirectory>
+      <bootstrapFile filesystemName="Bootstrap.php"/>
+    </applicationDirectory>
+    <dataDirectory enabled="false">
+      <cacheDirectory enabled="false"/>
+      <searchIndexesDirectory enabled="false"/>
+      <localesDirectory enabled="false"/>
+      <logsDirectory enabled="false"/>
+      <sessionsDirectory enabled="false"/>
+      <uploadsDirectory enabled="false"/>
+    </dataDirectory>
+    <docsDirectory>
+      <file filesystemName="README.txt"/>
+    </docsDirectory>
+    <libraryDirectory>
+      <zfStandardLibraryDirectory enabled="false"/>
+    </libraryDirectory>
+    <publicDirectory>
+      <publicStylesheetsDirectory enabled="false"/>
+      <publicScriptsDirectory enabled="false"/>
+      <publicImagesDirectory enabled="false"/>
+      <publicIndexFile filesystemName="index.php"/>
+      <htaccessFile filesystemName=".htaccess"/>
+    </publicDirectory>
+    <projectProvidersDirectory enabled="false"/>
+    <temporaryDirectory enabled="false"/>
+    <testsDirectory>
+      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
+      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
+      <testApplicationDirectory>
+        <testApplicationControllerDirectory>
+          <testApplicationControllerFile forControllerName="Index">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Auth">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="login"/>
+            <testApplicationActionMethod forActionName="logout"/>
+          </testApplicationControllerFile>
+        </testApplicationControllerDirectory>
+        <testApplicationModulesDirectory>
+          <testApplicationModuleDirectory forModuleName="admin">
+            <testApplicationControllerDirectory>
+              <testApplicationControllerFile forControllerName="Auth">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Dashboard">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Base">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Assurances">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Settings">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Package">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Tarification">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Garantie">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Assurance">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Assurant">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Attestation">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Vehicule">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Marque">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Model">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Cylindre">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Puissance">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Usage">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Auto">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Moto">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+            </testApplicationControllerDirectory>
+          </testApplicationModuleDirectory>
+          <testApplicationModuleDirectory forModuleName="manager">
+            <testApplicationControllerDirectory>
+              <testApplicationControllerFile forControllerName="Dashboard">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Account">
+                <testApplicationActionMethod forActionName="index"/>
+                <testApplicationActionMethod forActionName="profile"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Auto">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Moto">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Package">
+                <testApplicationActionMethod forActionName="index"/>
+                <testApplicationActionMethod forActionName="new"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Tarification">
+                <testApplicationActionMethod forActionName="index"/>
+                <testApplicationActionMethod forActionName="list"/>
+              </testApplicationControllerFile>
+              <testApplicationControllerFile forControllerName="Souscripteur">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+            </testApplicationControllerDirectory>
+          </testApplicationModuleDirectory>
+          <testApplicationModuleDirectory forModuleName="common">
+            <testApplicationControllerDirectory>
+              <testApplicationControllerFile forControllerName="Base">
+                <testApplicationActionMethod forActionName="index"/>
+              </testApplicationControllerFile>
+            </testApplicationControllerDirectory>
+          </testApplicationModuleDirectory>
+        </testApplicationModulesDirectory>
+      </testApplicationDirectory>
+      <testLibraryDirectory/>
+    </testsDirectory>
+  </projectDirectory>
+</projectProfile>

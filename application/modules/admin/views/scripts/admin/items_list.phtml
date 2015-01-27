@@ -1,0 +1,14 @@
+<div id="items-list">
+    <?php $routeName = $this->getRequest()->has('type') ? 'adminTypeRoute' : 'adminRoute'; ?>
+    <?php $routeActionName = $this->getRequest()->has('type') ? 'adminTypeActionRoute' : 'adminActionRoute'; ?>
+    <h2 class="title">Liste<span><a href="<?php echo $this->url(array('controller' => $this->controller, 'action' => 'add', 'type' => $this->getRequest()->getParam('type')), $routeName); ?>">+</a></span></h2>
+    <ul>
+        <?php 
+        foreach ($this->list as $item): 
+            $id = $item->{'get' . $this->fields[0]}();
+            $libelle = $item->{'get' . $this->fields[1]}();
+        ?>
+        <li class="item<?php if ($id == $this->id) echo " active" ?>"><a href="<?php echo $this->url(array('type' => $this->getRequest()->getParam('type'), 'id' => $id, 'controller' => $this->controller, 'action' => $this->action), $routeActionName) ?>" class="icon property"><?php echo $libelle ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+</div>

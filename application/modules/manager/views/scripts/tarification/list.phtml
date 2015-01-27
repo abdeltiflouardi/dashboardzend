@@ -1,0 +1,16 @@
+<div id="content">
+    <?php echo $this->partial('elements/_tabs.phtml', array('SubMenuTarification' => true, 'type' => $this->getRequest()->getParam('type'))); ?>
+    <a href="<?php echo $this->url(array('type' => $this->getRequest()->getParam('type'), 'controller' => 'tarification', 'action' => 'new'), 'managerActionRoute'); ?>">Nouveau tarif</a>
+
+    <div class="list">
+        <?php echo $this->partial('tarification/_list_' . $this->getRequest()->getParam('type') . '.phtml', array('paginator' => $this->paginator)); ?>
+
+        <div id="filter-side">
+            <h2>Recherche</h2>
+            <?php 
+                $this->tarificationFilterForm->setAction($this->url());
+                echo $this->tarificationFilterForm;
+            ?>
+        </div>
+    </div>
+</div>

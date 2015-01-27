@@ -1,0 +1,9 @@
+<div id="content">
+    <?php echo $this->partial('elements/_tabs.phtml', array('SubMenuTarification' => true, 'type' => $this->getRequest()->getParam('type'))); ?>
+    <div class="form">
+        <?php
+            $this->tarificationForm->setAction($this->url());
+            echo $this->tarificationForm;
+        ?>
+    </div>
+</div>

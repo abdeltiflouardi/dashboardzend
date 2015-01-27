@@ -1,0 +1,28 @@
+    <table class="list">
+        <tr>
+            <th>ID</th>
+            <th>Usage</th>
+            <th>Garantie</th>
+            <th>Carburant</th>
+            <th>Puissance</th>
+            <th>Prime</th>
+            <th>Franchise</th>
+            <th>Valeur décalrée</th>
+        </tr>
+        <?php foreach ($this->paginator as $index => $tarification): ?>
+        <tr class="<?php echo ($index % 2 == 0) ? 'even' : 'odd' ?>">
+            <td><a href="<?php echo $this->url(array('type' => $this->getRequest()->getParam('type'), 'controller' => 'tarification', 'id' => $tarification['TarificationID']), 'managerActionEditRoute'); ?>"><?php echo $tarification['TarificationID']; ?></a></td>
+            <td><?php echo $tarification['UsageID']; ?></td>
+            <td><?php echo $tarification['GarantieID']; ?></td>
+            <td><?php echo $tarification['CarburantID']; ?></td>
+            <td><?php echo $tarification['PuissanceID']; ?></td>
+            <td><?php echo $tarification['Prime']; ?></td>
+            <td><?php echo $tarification['Franchise']; ?></td>
+            <td><?php echo $tarification['ValeurDeclaree']; ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+    
+    <?php echo $this->paginationControl($this->paginator,
+                                        'Sliding',
+                                        array('paginator.phtml', 'common')); ?> 

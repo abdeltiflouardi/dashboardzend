@@ -1,0 +1,8 @@
+    <div class="tabs">
+    <ul>
+        <li><a href="<?php echo $this->url(array('controller' => $this->type), 'managerRoute') ?>"<?php if ($this->SubMenuHome): ?> class="selected"<?php endif; ?>>Accueil</a></li>
+        <li><a href="<?php echo $this->url(array('type' => $this->type, 'controller' => 'package', 'action' => 'list'), 'managerActionRoute') ?>"<?php if ($this->SubMenuPackage): ?> class="selected"<?php endif; ?>>Nos packages</a></li>
+        <li><a href="<?php echo $this->url(array('type' => $this->type, 'controller' => 'tarification', 'action' => 'list'), 'managerActionRoute') ?>"<?php if ($this->SubMenuTarification): ?> class="selected"<?php endif; ?>>Tarification</a></li>
+        <li><a href="<?php echo $this->url(array('type' => $this->type, 'controller' => 'garantie', 'action' => 'configuration'), 'managerActionRoute') ?>"<?php if ($this->SubMenuGaranties): ?> class="selected"<?php endif; ?>>Garanties</a></li>
+    </ul>
+    </div>

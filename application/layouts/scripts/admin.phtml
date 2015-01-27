@@ -1,0 +1,39 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Admin</title>
+        <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/admin/base.css')); ?>
+        <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/admin/screen.css')); ?>  
+    </head>
+    <body class="admin">
+        <div id="header">
+            <h1><a id="logo" href="<?php echo $this->url(array('controller' => 'dashboard'), 'adminRoute'); ?>">Clickassur</a></h1>
+
+            <div id="left-toolbar">
+                <ul class="inline">
+                    <li><a href="<?php echo $this->url(array('controller' => 'auto', 'action' => 'index'), 'adminRoute') ?>" class="icon-button car"><span>Auto</span></a></li>
+                    <li><a href="<?php echo $this->url(array('controller' => 'moto', 'action' => 'index'), 'adminRoute') ?>" class="icon-button moto"><span>Moto</span></a></li>
+                    <li><a href="<?php echo $this->url(array('controller' => 'settings', 'action' => 'index'), 'adminRoute') ?>" class="icon-button settings"><span>Configuration</span></a></li>
+                </ul>
+            </div>
+
+            <div id="center-toolbar">
+                <!-- Actions -->
+            </div>
+
+            <div id="right-toolbar">
+                <div id="lang" class="span-2 last">
+                    <?php echo $this->profileLink(); ?>
+                </div>
+            </div>
+        </div><!-- #header -->
+        <div id="content-wrapper">
+            <?php echo $this->layout()->content ?>
+        </div><!-- #content-wrapper -->
+
+        <div id="footer">
+            <p class="right">&copy; 2011 Clickassur</p>
+        </div><!-- #footer -->
+    </body>
+</html>

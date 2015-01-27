@@ -1,0 +1,17 @@
+<?php echo $this->partial('admin/sidebar.phtml', array('selected' => 'settings', 'item' => 'puissance')); ?>
+
+<div id="content">
+    <div class="left">
+        <?php echo $this->partial('admin/items_list.phtml', array('list' => $this->list, 'controller' => 'puissance', 'action' => 'edit','id' => $this->id, 'fields' => array('PuissanceID', 'PuissanceNbChevDe', 'PuissanceNbChevA'))) ?>
+    </div>
+    
+    <div class="right">
+        <h3 class="pagetitle icon property"><?php echo $this->translate('title.power'); ?></h3>
+        <div class="form">
+            <?php
+                $this->puissanceForm->setAction($this->url());
+                echo $this->puissanceForm;
+            ?>
+        </div>
+    </div>
+</div>

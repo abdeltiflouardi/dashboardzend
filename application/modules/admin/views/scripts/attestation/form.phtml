@@ -1,0 +1,17 @@
+<?php echo $this->partial('admin/sidebar.phtml', array('selected' => 'assurances', 'item' => 'attestation')); ?>
+
+<div id="content">
+    <div class="left">
+        <?php echo $this->partial('admin/items_list.phtml', array('list' => $this->list, 'controller' => 'attestation', 'action' => 'edit','id' => $this->id, 'fields' => array('AttestationID', 'AttestationID'))) ?>
+    </div>
+    
+    <div class="right">
+        <h3 class="pagetitle icon property"><?php echo $this->translate('title.attestation'); ?></h3>
+        <div class="form">
+            <?php
+                $this->attestationForm->setAction($this->url());
+                echo $this->attestationForm;
+            ?>
+        </div>
+    </div>
+</div>

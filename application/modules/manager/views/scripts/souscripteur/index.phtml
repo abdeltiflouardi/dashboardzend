@@ -1,0 +1,33 @@
+<div id="content">
+    <div class="list wihout-tabs">
+        <table class="list">
+            <tr>
+                <th>ID</th>
+                <th>CIN</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+            </tr>
+            <?php foreach ($this->paginator as $index => $souscripteur): ?>
+            <tr class="<?php echo ($index % 2 == 0) ? 'even' : 'odd' ?>">
+                <td><?php echo $souscripteur['SouscripteurID'] ?></td>
+                <td><?php echo $souscripteur['SouscripteurCIN'] ?></td>
+                <td><?php echo $souscripteur['SouscripteurNom'] ?></td>
+                <td><?php echo $souscripteur['SouscripteurPrenom'] ?></td>
+                <td><?php echo $souscripteur['SouscripteurEmail'] ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+
+        <?php echo $this->paginationControl($this->paginator,
+                                            'Sliding',
+                                            array('paginator.phtml', 'common')); ?>     
+        <div id="filter-side">
+            <h2>Recherche</h2>
+            <?php
+                $this->souscripteurFilterForm->setAction($this->url());
+                echo $this->souscripteurFilterForm;
+            ?>
+        </div>    
+    </div>
+</div>

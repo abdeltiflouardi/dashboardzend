@@ -1,0 +1,21 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Accueil</title>
+  <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/global.css')) ?>
+</head>
+<body>
+    <div id="header">
+        <ul id="header-menu">
+            <li<?php if (isset($this->menuHome)): ?> class="active"<?php endif; ?>><a href="<?php echo $this->url(array('controller' => 'dashboard'), 'managerRoute'); ?>">Accueil</a></li>
+            <li<?php if (isset($this->menuAuto)): ?> class="active"<?php endif; ?>><a href="<?php echo $this->url(array('controller' => 'auto'), 'managerRoute'); ?>">Auto</a></li>
+            <li<?php if (isset($this->menuMoto)): ?> class="active"<?php endif; ?>><a href="<?php echo $this->url(array('controller' => 'moto'), 'managerRoute'); ?>">Moto</a></li>
+            <li<?php if (isset($this->menuSouscripteur)): ?> class="active"<?php endif; ?>><a href="<?php echo $this->url(array('controller' => 'souscripteur'), 'managerRoute'); ?>">Souscripteur</a></li>
+            <li<?php if (isset($this->menuProfile)): ?> class="active"<?php endif; ?>><a href="<?php echo $this->url(array(), 'managerProfileRoute'); ?>">Profile</a></li>
+            <li class="right"><?php echo $this->managerUserLink() ?> <a href="<?php echo $this->url(array(), 'managerLogoutRoute'); ?>">Déconnexion</a></li>            
+        </ul>
+    </div>
+    <?php echo $this->layout()->content ?>
+</body>
+</html>

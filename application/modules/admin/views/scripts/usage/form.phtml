@@ -1,0 +1,17 @@
+<?php echo $this->partial('admin/sidebar.phtml', array('selected' => 'settings', 'item' => 'usage')); ?>
+
+<div id="content">
+    <div class="left">
+        <?php echo $this->partial('admin/items_list.phtml', array('list' => $this->list, 'controller' => 'usage', 'action' => 'edit','id' => $this->id, 'fields' => array('UsageID', 'UsageName'))) ?>
+    </div>
+    
+    <div class="right">
+        <h3 class="pagetitle icon property"><?php echo $this->translate('title.usage'); ?></h3>
+        <div class="form">
+            <?php
+                $this->usageForm->setAction($this->url());
+                echo $this->usageForm;
+            ?>
+        </div>
+    </div>
+</div>
